@@ -1,27 +1,34 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:ihtmecourses/Screens/Welcome/components/Background.dart';
+import 'package:ihtmecourses/components/rounded_button.dart';
 
 class Body extends StatelessWidget {
   @override
-  Widget Build(BuildContext context) {
+  Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return Container(
-      height: size.height,
-      width: double.infinity,
-      child: Stack(
+    return Background(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          Positioned(
-            top: 0,
-            left: 0,
-            child: Image.asset("name", width: size.width * 0.3),
-          )
+          Text(
+            "Welcome to IHTM-Ecourses",
+            style: TextStyle(fontWeight: FontWeight.bold),
+          ),
+          SizedBox(
+            height: size.height * 0.05,
+          ),
+          SvgPicture.asset(
+            //picture of login will be here
+            "",
+            height: size.height * 0.4,
+          ),
+          RoundedButton(
+            text: "SIGN IN",
+            press: () {},
+          ),
         ],
       ),
     );
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    // TODO: implement build
-    throw UnimplementedError();
   }
 }
