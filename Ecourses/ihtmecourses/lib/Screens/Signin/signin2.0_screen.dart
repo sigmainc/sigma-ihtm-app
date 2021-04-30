@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class SigninScreen extends StatelessWidget {
+class SigninScreen2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
