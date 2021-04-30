@@ -11,7 +11,7 @@ class Background extends StatelessWidget {
   final Size size;
 
   @override
-  Widget Build(BuildContext context) {
+  Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Container(
       height: size.height,
@@ -29,11 +29,5 @@ class Background extends StatelessWidget {
         ],
       ),
     );
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    // TODO: implement build
-    throw UnimplementedError();
   }
 }
